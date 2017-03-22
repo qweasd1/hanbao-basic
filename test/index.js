@@ -4,9 +4,6 @@
 'use strict'
 
 const hanbao = require('hanbao');
-const basicPlugin = require('../lib/index');
-const mongodb = require('mongodb');
-const factory = require('hanbao-basic-mongo');
 
 let p1 = function (manager,next){
   
@@ -30,14 +27,16 @@ let manager  = hanbao({
       options:{
         sourceTypes:[
           {
-            load:"hanbao-basic-mongo"
+            load:"hanbao-basic-mongo",
+            default:true
           }
         ],
         datasources:[{
           name:"db2",
           type:"mongo",
           url:"mongodb://localhost:27017/hanbao2",
-          softDelete:true
+          softDelete:true,
+          default:true
         }]
       }
     }
@@ -48,6 +47,10 @@ let manager  = hanbao({
   }
   else {
     console.log(manager.models.animal.methods.create.default({name:"mimi"}).then((data)=>{
+      // console.log(data);
+    }));
+  
+    console.log(manager.models.person.methods.read.default({}).then((data)=>{
       console.log(data);
     }));
   }

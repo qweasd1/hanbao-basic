@@ -1,0 +1,25 @@
+{
+  "name": "hanbao-basic",
+  "main": "lib/index.js",
+  "version": "0.0.1",
+  "dependencies": {
+    "hanbao-utils": "^0.1.2"
+  },
+  "devDependencies": {
+    "hanbao": "^0.1.8",
+    "hanbao-basic-mongo": "^0.1.4",
+    "hanbao-basic-utils": "^0.1.1",
+    "mongodb": "^2.2.25"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qweasd1/hanbao.git"
+  },
+  "description": "CRUD generator for hanbao model",
+  "maintainers": [
+    {
+      "name": "tony",
+      "email": "zhw65@pitt.edu"
+    }
+  ]
+}

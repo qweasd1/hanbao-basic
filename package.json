@@ -3,7 +3,7 @@
   "main": "lib/index.js",
   "version": "0.0.1",
   "dependencies": {
-    "hanbao-utils": "^0.1.2"
+    "hanbao-utils": "^0.1.0"
   },
   "devDependencies": {
     "hanbao": "^0.1.8",
